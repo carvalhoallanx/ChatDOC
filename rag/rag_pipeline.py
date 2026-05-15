@@ -23,8 +23,7 @@ def load_db():
     from langchain_ollama import OllamaEmbeddings
 
     embeddings = OllamaEmbeddings(model="nomic-embed-text")
-    vector_store_path = Path(__file__).resolve().parents[1] / "vector_store"
-    
+    vector_store_path = "/opt/render/project/src/vector_store"
     # Verificar se o diretório e arquivos existem
     if not vector_store_path.exists():
         raise FileNotFoundError(f"Banco de dados não encontrado em {vector_store_path}. Faça upload de um documento primeiro.")
